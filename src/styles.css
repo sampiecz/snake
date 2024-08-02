@@ -1,0 +1,60 @@
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  padding: 5px;
+  border: 1px solid lightgray;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+/* Styling for tail and head to match column borders */
+.tail,
+.head {
+  border: 1px solid lightgray;
+}
+
+/* Snake tail specific styling */
+.tail {
+  background: green;
+  border-radius: 50%;
+}
+
+/* Snake head specific styling */
+.head {
+  background: darkgreen;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Add eyes to the snake head */
+.head::before {
+  content: '•';
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  top: 4px;
+  left: 5px;
+}
+
+.head::after {
+  content: '•';
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+}
+
+/* Dot styling */
+.dot {
+  background: red;
+  border: 1px solid lightgray;
+}
